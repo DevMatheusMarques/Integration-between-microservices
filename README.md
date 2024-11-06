@@ -110,7 +110,7 @@ O microserviço "notify" é responsável por:
 
 2. Dentro da pasta acesse o terminal em cada microsserviço(usuário e notify) e rode o comando:
    ```bash
-   mvn clean installmvn clean install -DskipTests
+   mvn clean install -DskipTests
    ```
    Assim que os jar estiverem sido gerados, vá a pasta principal que agrupa todos microsserviços e use o comando:
    ```bash
