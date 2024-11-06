@@ -1,0 +1,210 @@
+[
+  {
+    "id": 1,
+    "username": "joaosilva",
+    "email": "joao.silva@email.com",
+    "address": {
+      "zipCode": "01001-000",
+      "street": "Praça da Sé",
+      "complement": "Apto 101",
+      "neighborhood": "Sé",
+      "city": "São Paulo",
+      "state": "SP"
+    }
+  },
+  {
+    "id": 2,
+    "username": "mariaribeiro",
+    "email": "maria.ribeiro@email.com",
+    "address": {
+      "zipCode": "20010-000",
+      "street": "Avenida Rio Branco",
+      "complement": "Sala 501",
+      "neighborhood": "Centro",
+      "city": "Rio de Janeiro",
+      "state": "RJ"
+    }
+  },
+  {
+    "id": 3,
+    "username": "carlos.santos",
+    "email": "carlos.santos@email.com",
+    "address": {
+      "zipCode": "30130-000",
+      "street": "Rua da Bahia",
+      "complement": "Casa 02",
+      "neighborhood": "Centro",
+      "city": "Belo Horizonte",
+      "state": "MG"
+    }
+  },
+  {
+    "id": 4,
+    "username": "fernanda.rodrigues",
+    "email": "fernanda.rodrigues@email.com",
+    "address": {
+      "zipCode": "40015-000",
+      "street": "Rua Chile",
+      "complement": "Sala 401",
+      "neighborhood": "Centro Histórico",
+      "city": "Salvador",
+      "state": "BA"
+    }
+  },
+  {
+    "id": 5,
+    "username": "anaoliveira",
+    "email": "ana.oliveira@email.com",
+    "address": {
+      "zipCode": "60060-120",
+      "street": "Rua Senador Pompeu",
+      "complement": "Apto 202",
+      "neighborhood": "Centro",
+      "city": "Fortaleza",
+      "state": "CE"
+    }
+  },
+  {
+    "id": 6,
+    "username": "lucas.pereira",
+    "email": "lucas.pereira@email.com",
+    "address": {
+      "zipCode": "70040-010",
+      "street": "Esplanada dos Ministérios",
+      "complement": "Bloco A",
+      "neighborhood": "Zona Cívico-Administrativa",
+      "city": "Brasília",
+      "state": "DF"
+    }
+  },
+  {
+    "id": 7,
+    "username": "beatriz.melo",
+    "email": "beatriz.melo@email.com",
+    "address": {
+      "zipCode": "80010-000",
+      "street": "Rua XV de Novembro",
+      "complement": "Sala 203",
+      "neighborhood": "Centro",
+      "city": "Curitiba",
+      "state": "PR"
+    }
+  },
+  {
+    "id": 8,
+    "username": "ricardosouza",
+    "email": "ricardo.souza@email.com",
+    "address": {
+      "zipCode": "90010-000",
+      "street": "Rua dos Andradas",
+      "complement": "Apto 303",
+      "neighborhood": "Centro Histórico",
+      "city": "Porto Alegre",
+      "state": "RS"
+    }
+  },
+  {
+    "id": 9,
+    "username": "fabiana.lima",
+    "email": "fabiana.lima@email.com",
+    "address": {
+      "zipCode": "69005-070",
+      "street": "Avenida Eduardo Ribeiro",
+      "complement": "Loja 04",
+      "neighborhood": "Centro",
+      "city": "Manaus",
+      "state": "AM"
+    }
+  },
+  {
+    "id": 10,
+    "username": "marcio.gomes",
+    "email": "marcio.gomes@email.com",
+    "address": {
+      "zipCode": "66010-000",
+      "street": "Avenida Presidente Vargas",
+      "complement": "Apto 501",
+      "neighborhood": "Campina",
+      "city": "Belém",
+      "state": "PA"
+    }
+  },
+  {
+    "id": 11,
+    "username": "roberto.alves",
+    "email": "roberto.alves@email.com",
+    "address": {
+      "zipCode": "58010-010",
+      "street": "Rua Barão do Triunfo",
+      "complement": "Casa 10",
+      "neighborhood": "Centro",
+      "city": "João Pessoa",
+      "state": "PB"
+    }
+  },
+  {
+    "id": 12,
+    "username": "paula.souza",
+    "email": "paula.souza@email.com",
+    "address": {
+      "zipCode": "57010-200",
+      "street": "Rua do Comércio",
+      "complement": "Apto 304",
+      "neighborhood": "Centro",
+      "city": "Maceió",
+      "state": "AL"
+    }
+  },
+  {
+    "id": 13,
+    "username": "andrea.oliveira",
+    "email": "andrea.oliveira@email.com",
+    "address": {
+      "zipCode": "49010-000",
+      "street": "Rua Geru",
+      "complement": "Casa 5",
+      "neighborhood": "Centro",
+      "city": "Aracaju",
+      "state": "SE"
+    }
+  },
+  {
+    "id": 14,
+    "username": "felipe.martins",
+    "email": "felipe.martins@email.com",
+    "address": {
+      "zipCode": "64000-970",
+      "street": "Rua Areolino de Abreu",
+      "complement": "Sala 702",
+      "neighborhood": "Centro",
+      "city": "Teresina",
+      "state": "PI"
+    }
+  },
+  {
+    "id": 15,
+    "username": "aline.ferreira",
+    "email": "aline.ferreira@email.com",
+    "address": {
+      "zipCode": "76801-000",
+      "street": "Rua Dom Pedro II",
+      "complement": "Apto 103",
+      "neighborhood": "Centro",
+      "city": "Porto Velho",
+      "state": "RO"
+    }
+  },
+  {
+    "id": 16,
+    "username": "gustavo.carvalho",
+    "email": "gustavo.carvalho@email.com",
+    "address": {
+      "zipCode": "69900-012",
+      "street": "Avenida Ceará",
+      "complement": "Casa 2",
+      "neighborhood": "Bosque",
+      "city": "Rio Branco",
+      "state": "AC"
+    }
+  }
+]
