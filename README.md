@@ -99,6 +99,7 @@ O microserviço "notify" é responsável por:
 ### Pré-requisitos
 
 - **Docker e Docker Compose** para subir os serviços de container.
+- **Maven** para gerar os arquivos .jar das aplicações de usuário e notify.
 
 ### Passo a Passo para Execução
 
@@ -107,11 +108,16 @@ O microserviço "notify" é responsável por:
    git clone https://github.com/DevMatheusMarques/integration-between-microservices.git
    cd integration-between-microservices
 
-2. Dentro da pasta acesse o terminal e os serviços com Docker Compose:
+2. Dentro da pasta acesse o terminal em cada microsserviço(usuário e notify) e rode o comando:
+   ```bash
+   mvn clean installmvn clean install -DskipTests
+   ```
+   Assim que os jar estiverem sido gerados, vá a pasta principal que agrupa todos microsserviços e use o comando:
    ```bash
    docker-compose up -d
+   ```
    
-3. Após executar o comandom o Docker irá subir as imagens e containers da aplicação e então você poderá acessar os microsserviços e realizar as requisições desejadas.
+3. Após executar o comando o Docker irá subir as imagens e containers da aplicação e então você poderá acessar os microsserviços e realizar as requisições desejadas.
    
    Exemplo com a aplicação front-end:
 
