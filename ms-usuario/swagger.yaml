@@ -1,0 +1,223 @@
+openapi: 3.0.1
+info:
+  title: API Micro Serviço de Usuários
+  description: API para gerenciar autenticação, registro e informações de usuários
+  version: 1.0.0
+  contact:
+    name: Matheus Marques
+    email: matheus.marques.pb@compasso.com.br
+    url: https://github.com/DevMatheusMarques
+  license:
+    name: GPL-3.0
+    url: https://www.gnu.org/licenses/gpl-3.0.html
+tags:
+  - name: Usuários
+    description: Endpoints relacionados ao gerenciamento de usuários
+  - name: API de Buscar CEP
+    description: Endpoint relacionado a consulta de CEP
+  - name: Autenticação do Usuário
+    description: Endpoint relacionado a autenticação do usuário na API
+paths:
+  /api/users/auth:
+    post:
+      tags:
+        - Autenticação do Usuário
+      summary: Autentica o usuário
+      description: Gera um token JWT para autenticação do usuário
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginUserDto"
+      responses:
+        200:
+          description: Usuário autenticado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RecoveryJwtTokenDto"
+        401:
+          description: Credenciais inválidas
+
+  /api/users/register:
+    post:
+      tags:
+        - Usuários
+      summary: Registra um novo usuário
+      description: Registra um novo usuário com base nos dados fornecidos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserRequestDTO"
+      responses:
+        201:
+          description: Usuário registrado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserResponseDTO"
+        400:
+          description: Dados inválidos
+        409:
+          description: Usuário já existe
+        500:
+          description: Erro interno no servidor
+
+  /api/users/update-password:
+    patch:
+      tags:
+        - Usuários
+      summary: Atualiza a senha do usuário
+      description: Altera a senha do usuário para a nova senha especificada
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdatePasswordRequestDTO"
+      responses:
+        204:
+          description: Senha atualizada com sucesso
+        404:
+          description: Usuário não encontrado
+        400:
+          description: Dados inválidos
+        500:
+          description: Erro interno no servidor
+
+  /{cep}/json:
+    get:
+      tags:
+        - API de Buscar CEP
+      summary: Busca endereço pelo CEP
+      description: Retorna as informações de endereço com base no CEP fornecido
+      parameters:
+        - name: cep
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Endereço recuperado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AddressRequestDTO"
+        404:
+          description: CEP não encontrado
+
+components:
+  schemas:
+    LoginUserDto:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+      required:
+        - email
+        - password
+
+    RecoveryJwtTokenDto:
+      type: object
+      properties:
+        token:
+          type: string
+        expiresIn:
+          type: integer
+      required:
+        - token
+        - expiresIn
+
+    UserRequestDTO:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        email:
+          type: string
+        cep:
+          type: string
+      required:
+        - username
+        - password
+        - email
+        - cep
+
+    UserResponseDTO:
+      type: object
+      properties:
+        username:
+          type: string
+        email:
+          type: string
+        address:
+          $ref: "#/components/schemas/AddressResponseDTO"
+      required:
+        - username
+        - email
+
+    UpdatePasswordRequestDTO:
+      type: object
+      properties:
+        username:
+          type: string
+        oldPassword:
+          type: string
+        newPassword:
+          type: string
+      required:
+        - username
+        - oldPassword
+        - newPassword
+
+    AddressRequestDTO:
+      type: object
+      properties:
+        zipCode:
+          type: string
+        street:
+          type: string
+        complement:
+          type: string
+        neighborhood:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+      required:
+        - zipCode
+        - street
+        - neighborhood
+        - city
+        - state
+
+    AddressResponseDTO:
+      type: object
+      properties:
+        zipCode:
+          type: string
+        street:
+          type: string
+        complement:
+          type: string
+        neighborhood:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+      required:
+        - zipCode
+        - street
+        - neighborhood
+        - city
+        - state
